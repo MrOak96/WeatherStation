@@ -25,6 +25,7 @@ namespace WeatherApp.ViewModels
             if (TemperatureService == null)
                 throw new NullReferenceException();
         }
+
         public void SetTemperatureService(ITemperatureService temperatureService)
         {
             TemperatureService = temperatureService;
