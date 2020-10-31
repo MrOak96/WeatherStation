@@ -29,11 +29,11 @@ namespace WeatherStationTests
         public void CelsiusInFahrenheit_AlwaysReturnGoodValue(double C, double expected)
         {
             // Arrange
-
+            double actual;
             // Act       
-
+            actual = TemperatureViewModel.CelsiusInFahrenheit(C);
             // Assert
-
+            Assert.Equal(expected, actual);
             /// TODO : git commit -a -m "T01 CelsisInFahrenheit_AlwaysReturnGoodValue : Done"
         }
 
