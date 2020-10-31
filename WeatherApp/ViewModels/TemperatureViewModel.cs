@@ -24,6 +24,13 @@ namespace WeatherApp.ViewModels
         {
             if (TemperatureService == null)
                 throw new NullReferenceException();
+            else
+                getTemperatureAsync(String.Empty);
+        }
+
+        private async void getTemperatureAsync(string obj)
+        {
+            CurrentTemp = await TemperatureService.GetTempAsync();
         }
 
         public void SetTemperatureService(ITemperatureService temperatureService)
