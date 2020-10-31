@@ -35,5 +35,10 @@ namespace WeatherApp.ViewModels
             return Math.Round((f - 32) * 5 / 9, 1);
         }
 
+        public bool CanGetTemp()
+        {
+            if (TemperatureService == null) return false;
+            else return true;
+        }
     }
 }
