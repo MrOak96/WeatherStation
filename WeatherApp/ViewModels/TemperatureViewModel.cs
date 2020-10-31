@@ -25,6 +25,11 @@ namespace WeatherApp.ViewModels
             if (TemperatureService == null)
                 throw new NullReferenceException();
         }
+        public void SetTemperatureService(ITemperatureService temperatureService)
+        {
+            TemperatureService = temperatureService;
+        }
+
         public static double CelsiusInFahrenheit(double c)
         {
             return Math.Round(c * 9 / 5 + 32, 1);
